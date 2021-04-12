@@ -17,7 +17,7 @@
     (async function() {
       let response = await fetch(`/api/getmessage`);
       let data = await response.json();
-      document.querySelector('#name').textContent = data.customtableitem_sc_workspaces[1].TotalRecords;
+      document.querySelector('#name').textContent = data.customtableitem_sc_workspaces[1].TotalRecords[0].TotalRecords;
     }())
   </script>
 </body>
