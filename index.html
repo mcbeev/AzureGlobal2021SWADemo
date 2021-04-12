@@ -16,7 +16,8 @@
 
   <script>
     (async function() {
-      let { text } = await( await fetch(`/api/getmessage?name=brian`).then(res => res.text()).then(res => res.body));
+      let { response } = await fetch(`/api/getmessage?name=brian`);
+      let { text } = await response.text();
       document.querySelector('#name').textContent = text;
     }())
   </script>
